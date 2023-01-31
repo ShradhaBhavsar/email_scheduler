@@ -1,5 +1,4 @@
 <h2><%= "Welcome, #{current_user.name}" %></h2> <br>
-<%= "Current Status #{current_user.name}" %> <br>
+<b><%= "Current Status: #{current_user.confirmed? ? 'Confirmed' : 'Unconfirmed'}" %></b> <br>
 
 <%= link_to('Logout', destroy_user_session_path, :method => 'delete', class: "btn btn-warning btn-lg ms-2") %>
-<%= link_to('My Account', edit_user_registration_path, :method => 'get', class: "btn btn-warning btn-lg ms-2") %>
